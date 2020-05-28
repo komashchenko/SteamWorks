@@ -21,9 +21,7 @@
 #include "steam_gameserver.h"
 #include "isteamgamecoordinator.h"
 
-#ifdef STEAM_API_INTERNAL_H
-	S_API ISteamClient *g_pSteamClientGameServer; /* This is awful. */
-#endif
+S_API ISteamClient *g_pSteamClientGameServer;
 
 class SteamWorksGameServer
 {
