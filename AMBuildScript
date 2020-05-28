@@ -99,7 +99,7 @@ class SteamWorksConfig(object):
     else:
       self.sm_root = ResolveEnvPath('SOURCEMOD16', 'sourcemod-1.6')
       if not self.sm_root:
-        self.sm_root = ResolveEnvPath('SOURCEMOD', 'sourcemod-1.6')
+        self.sm_root = ResolveEnvPath('SOURCEMOD', 'sourcemod')
       if not self.sm_root:
         self.sm_root = ResolveEnvPath('SMCENTRAL', 'sourcemod-central')
 
@@ -266,7 +266,9 @@ class SteamWorksConfig(object):
       os.path.join(context.currentSourcePath, 'sdk'),
       os.path.join(self.sm_root, 'public'),
       os.path.join(self.sm_root, 'public', 'extensions'),
-      os.path.join(self.sm_root, 'public', 'sourcepawn'),
+      os.path.join(self.sm_root, 'sourcepawn', 'include'),
+      os.path.join(self.sm_root, 'public', 'amtl', 'amtl'),
+      os.path.join(self.sm_root, 'public', 'amtl'),
     ]
     return compiler
 	
